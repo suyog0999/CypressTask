@@ -56,6 +56,11 @@ class MakeMyTrip{
         cy.get(this.Elements.PopUp).click({force:true})
     }
 
+    ToAssert(){
+        cy.get('.fontSize16.blackText.appendLR20.appendBottom20.paddingTop20 ').should('contain','Pune → New Delhi  Wed, 5 Jul')
+        cy.get('.hsw_inputField.font16.whiteText.textOverflow').eq(2).should('have.value','Wed, Jul 5, 2023')
+    }
+
     
 }
 
